@@ -12,12 +12,10 @@
     <meta name="description" content="食べログ百名店を地図上で一発検索！現在地周辺のラーメン、カレー、パンなどの名店をすぐに探せます。ランチやディナーのお店選びに。完全無料・登録不要。">
     
     <!-- 3. OGP設定（LINEやXでシェアされた時の見た目設定） -->
-    <meta property="og:url" content="https://[あなたのユーザー名].github.io/hyakumeiten-map/">
+    <meta property="og:url" content="https://laggykiller.github.io/mesi-map/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="百名店マップ - 現在地から名店を探す">
     <meta property="og:description" content="「今いる場所」の近くにある食べログ百名店を地図で表示。評価や予算も一目でわかります。">
-    <!-- サイトのスクリーンショットを撮ってアップロードし、そのURLを貼るとベストです -->
-    <meta property="og:image" content="https://placehold.jp/1200x630.png?text=MapPreview"> 
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Google Fonts & Icons -->
@@ -214,9 +212,8 @@
         // --- 初期設定 ---
         const map = L.map('map', { zoomControl: false }).setView([35.6812, 139.7671], 12);
         
-        // 地図スタイル：CartoDB Voyager (シンプルで美しい)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; CARTO', maxZoom: 20
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png, {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
         let allShops = [];
